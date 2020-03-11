@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>StationAdministrator</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <!--<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">-->
+    <link rel="stylesheet" href="{% static 'css/dependencias.css' %}">
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  </head>
+  <body >
+    {% csrf_token %}
+    
+          <!-- <form method="post" action="" id="form_login"> 
+      {% csrf_token %}
+      <div align="center">
+        <p><h2>Bienvenido</h2></p>
+        <p><img src="Login.png"></p>
+        <h5>E-mail</h5>
+        <p><input type="text" name="E-mail" id="id_username"></p>
+        <h3>Contraseña</h3>
+        <p><input type="text" name="Contraseña" id="id_password"></p>
+        <p><input type="submit" value="Iniciar Sesion"></p><br>
+        <p><h4>¿Olvidaste tu contraseña? <a href="https://www.youtube.com/"> Recuperar</a></h4></p>
+      </div>-->
+      <header class="cabecera">
+        <div id="title">
+          <b>RED CIAQ</b>
+        </div>
+        <div id="logout" onclick="cerrar();"> 
+          <a >Cerrar Sesión</a>
+        </div>
+        <div id="homebtn">
+          <a href="">
+            <img src="{% static 'images/casita.png' %}">
+          </a>	
+        </div>
+      </header>
+      <table align="center">
+        <tr class="relleno">
+          <td class="row" style="color: white">Id</td>
+          <td style="color: white">Estacion</td>
+          <td style="color: white">Dependencia</td>
+          <td style="color: white">Municipio</td>
+          <td class="row2" style="color: white">Estado</td>
+        </tr>
+        <tr>
+          <td class="row">1</td>
+          <td>Chula Vista</td>
+          <td>CMPC-Qro</td>
+          <td>Queretaro</td>
+          <td class="row2">
+            <select class="status">
+              <option value="1">ONLINE</option>
+              <option value="2">OFFLINE</option>
+              <option value="3">OFF</option>
+            </select>
+          </td>
+        </tr>
+        <tr class="relleno">
+          <td class="row" style="color: white">2</td>
+          <td style="color: white">Belén</td>
+          <td style="color: white">UAQ CIAQ</td>
+          <td style="color: white">Queretaro</td>
+          <td class="row2">
+            <select>
+              <option value="1">ONLINE</option>
+              <option value="2">OFFLINE</option>
+              <option value="3">OFF</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="row">3</td>
+          <td>Real del Parque</td>
+          <td>CMPC-Qro</td>
+          <td>Queretaro</td>
+          <td class="row2">
+            <select class="status">
+              <option value="1">ONLINE</option>
+              <option value="2">OFFLINE</option>
+              <option value="3">OFF</option>
+            </select>
+          </td>
+        </tr>
+        <tr class="relleno">
+          <td class="row" style="color: white">4</td>
+          <td style="color: white">Candiles</td>
+          <td style="color: white">UAQ CIAQ</td>
+          <td style="color: white">Queretaro</td>
+          <td class="row2">
+            <select>
+              <option value="1">ONLINE</option>
+              <option value="2">OFFLINE</option>
+              <option value="3">OFF</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="row">5</td>
+          <td>Cimatario</td>
+          <td>UAQ CIAQ</td>
+          <td>Queretaro</td>
+          <td class="row2">
+            <select class="status">
+              <option value="1">ONLINE</option>
+              <option value="2">OFFLINE</option>
+              <option value="3">OFF</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+   <!-- </form>
+      form method="POST" class="post-form">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Iniciar">
+      <a href="registrar">Registrarse</a> 
+</form>-->
+  </body>
+</html>
